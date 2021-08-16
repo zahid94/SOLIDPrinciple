@@ -71,6 +71,10 @@
     <Compile Include="Class1.cs" />
     <Compile Include="Classes\TwilloService.cs" />
     <Compile Include="Classes\UserService.cs" />
+    <Compile Include="OCP\CircleService.cs" />
+    <Compile Include="OCP\RectangleService.cs" />
+    <Compile Include="OCP\ShapeService.cs" />
+    <Compile Include="OCP\SquareService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
