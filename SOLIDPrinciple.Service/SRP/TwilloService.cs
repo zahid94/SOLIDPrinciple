@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Twilio;
 using Twilio.Rest.Api.V2010.Account;
 
-namespace SOLIDPrinciple.Service.Classes
+namespace SOLIDPrinciple.Service.SRP
 {
     public class TwilloService
     {

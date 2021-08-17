@@ -69,8 +69,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
-    <Compile Include="Classes\TwilloService.cs" />
-    <Compile Include="Classes\UserService.cs" />
+    <Compile Include="SRP\TwilloService.cs" />
+    <Compile Include="SRP\UserService.cs" />
     <Compile Include="OCP\CircleService.cs" />
     <Compile Include="OCP\RectangleService.cs" />
     <Compile Include="OCP\ShapeService.cs" />
@@ -79,6 +79,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interface\" />
+    <Folder Include="ISP\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

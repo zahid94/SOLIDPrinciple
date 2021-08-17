@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SOLIDPrinciple.Service.Classes
+namespace SOLIDPrinciple.Service.SRP
 {
     public class UserService
     {
