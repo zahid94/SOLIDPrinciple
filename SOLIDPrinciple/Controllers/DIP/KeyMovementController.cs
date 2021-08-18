@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace SOLIDPrinciple.Controllers.DIP
 {
+    [RoutePrefix("api/KeyMovement")]
     public class KeyMovementController : ApiController
     {
         private readonly IMaster<KeyMovement> Service;
@@ -18,6 +19,8 @@ namespace SOLIDPrinciple.Controllers.DIP
         }
 
         // POST api/<controller>
+        [HttpPost]
+        [Route("Create")]
         public IHttpActionResult Create(KeyMovement keyMovement)
         {
             if (ModelState.IsValid)

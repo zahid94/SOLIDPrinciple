@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace SOLIDPrinciple.Controllers.LSP
 {
+    [RoutePrefix("api/KeyRequest")]
     public class KeyRequestController : ApiController
     {
         private readonly KeyRequestService service;
@@ -18,6 +19,9 @@ namespace SOLIDPrinciple.Controllers.LSP
         }
         
         // POST api/<controller>
+        [HttpPost]
+        [Route("Create")]
+
         public void Create(KeyRequest keyRequest)
         {
             if (ModelState.IsValid)

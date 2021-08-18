@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace SOLIDPrinciple.Controllers.SRP
 {
+    [RoutePrefix("api/User")]
     public class UserController : ApiController
     {
         private readonly UserService service;
@@ -17,6 +18,8 @@ namespace SOLIDPrinciple.Controllers.SRP
             service = new UserService();
         }
 
+        [HttpPost]
+        [Route("Create")]
         // POST api/<controller>
         public IHttpActionResult Create(Users users)
         {

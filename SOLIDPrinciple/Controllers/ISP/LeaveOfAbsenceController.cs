@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace SOLIDPrinciple.Controllers.ISP
 {
+    [RoutePrefix("api/LeaveOfAbsence")]
     public class LeaveOfAbsenceController : ApiController
     {
         private readonly LeaveOfAbsenceService service;
@@ -17,12 +18,16 @@ namespace SOLIDPrinciple.Controllers.ISP
             service = new LeaveOfAbsenceService();
         }
 
+        [HttpGet]
+        [Route("LeaveForUser/{id}")]
         // GET api/<controller>/5
         public IEnumerable<LeaveOfAbsence> LeaveForUser(int id)
         {
             return service.LeaveForUser(x=>x.UserId==id);
         }
 
+        [HttpPost]
+        [Route("Post")]
         // POST api/<controller>
         public void Post(LeaveOfAbsence absence)
         {

@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace SOLIDPrinciple.Controllers.LSP
 {
+    [RoutePrefix("api/KeyExtension")]
     public class KeyExtensionController : ApiController
     {
         private readonly KeyExtensionService service;
@@ -18,6 +19,8 @@ namespace SOLIDPrinciple.Controllers.LSP
         }
 
         // POST api/<controller>
+        [HttpPost]
+        [Route("Create")]
         public void Create(KeyExtension keyExtension)
         {
             if (ModelState.IsValid)

@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace SOLIDPrinciple.Controllers.ISP
 {
+    [RoutePrefix("api/Payment")]
     public class PaymentController : ApiController
     {
         private readonly PaymentService service;
@@ -16,12 +17,17 @@ namespace SOLIDPrinciple.Controllers.ISP
         {
             service = new PaymentService();
         }
+
+        [HttpGet]
+        [Route("PaymentForUsers/{Id}")]
         // GET api/<controller>
         public IEnumerable<Payment> PaymentForUsers(int Id)
         {
             return service.PaymentForUser(x=>x.UserId==Id);
         }
 
+        [HttpPost]
+        [Route("Create")]
         // POST api/<controller>
         public void Create(Payment payment)
         {

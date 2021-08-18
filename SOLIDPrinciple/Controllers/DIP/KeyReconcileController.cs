@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace SOLIDPrinciple.Controllers.DIP
 {
+    [RoutePrefix("api/KeyReconcile")]
     public class KeyReconcileController : ApiController
     {
         private readonly IMaster<KeyReconcile> Service;
@@ -17,6 +18,8 @@ namespace SOLIDPrinciple.Controllers.DIP
             Service = new KeyReconcileService();
         }
        
+        [HttpPost]
+        [Route("Create")]
         // POST api/<controller>
         public IHttpActionResult Create(KeyReconcile keyReconcile)
         {
