@@ -69,6 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="DIP\IMaster.cs" />
+    <Compile Include="DIP\KeyMovementService.cs" />
+    <Compile Include="DIP\KeyReconcileService.cs" />
     <Compile Include="LSP\IAction.cs" />
     <Compile Include="LSP\IKeyExtension.cs" />
     <Compile Include="LSP\IKeyRequest.cs" />
@@ -88,7 +91,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="DIP\" />
     <Folder Include="Interface\" />
   </ItemGroup>
   <ItemGroup>

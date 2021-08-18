@@ -53,6 +53,8 @@
   <ItemGroup>
     <Compile Include="ContextArea\SOLIDPrincipleDbContext.cs" />
     <Compile Include="KeyExtension.cs" />
+    <Compile Include="KeyMovement.cs" />
+    <Compile Include="KeyReconcile.cs" />
     <Compile Include="KeyRequest.cs" />
     <Compile Include="LeaveOfAbsence.cs" />
     <Compile Include="Payment.cs" />

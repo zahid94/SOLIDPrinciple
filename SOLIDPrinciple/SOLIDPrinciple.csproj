@@ -162,6 +162,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\DIP\KeyMovementController.cs" />
+    <Compile Include="Controllers\DIP\KeyReconcileController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -252,6 +254,16 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SOLIDPrinciple.Models\SOLIDPrinciple.Models.csproj">
+      <Project>{0CE9D92B-68A0-4607-A03A-E4A9BDF31432}</Project>
+      <Name>SOLIDPrinciple.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SOLIDPrinciple.Service\SOLIDPrinciple.Service.csproj">
+      <Project>{B801B604-B860-4098-BBEC-92862EE12D74}</Project>
+      <Name>SOLIDPrinciple.Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
