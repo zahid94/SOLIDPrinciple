@@ -1,4 +1,5 @@
 ﻿using SOLIDPrinciple.Models.ContextArea;
+using SOLIDPrinciple.Repository.SystemManager;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
@@ -24,8 +25,9 @@ namespace SOLIDPrinciple.Repository
             {
                 return entities.Add(entity);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Helper.Text(ex.Message);
                 return entity;
             }
         }
@@ -36,9 +38,10 @@ namespace SOLIDPrinciple.Repository
             {
                 return dbContext.Entry(entity).State = EntityState.Modified;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Helper.Text(ex.Message);
+                return EntityState.Unchanged;
             }
         }
 
@@ -48,9 +51,10 @@ namespace SOLIDPrinciple.Repository
             {
                 return entities.ToList();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Helper.Text(ex.Message);
+                return new List<TEntity>();
             }
         }
 
@@ -60,9 +64,10 @@ namespace SOLIDPrinciple.Repository
             {
                 return entities.Where(expression).ToList();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Helper.Text(ex.Message);
+                return new List<TEntity>();
             }
         }
 
@@ -72,9 +77,10 @@ namespace SOLIDPrinciple.Repository
             {
                 return entities.FirstOrDefault(expression);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Helper.Text(ex.Message);
+                return new List<TEntity>().FirstOrDefault();
             }
         }
 
@@ -84,9 +90,10 @@ namespace SOLIDPrinciple.Repository
             {
                 return entities.LastOrDefault(expression);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Helper.Text(ex.Message);
+                return new List<TEntity>().FirstOrDefault();
             }
         }
 
@@ -96,9 +103,10 @@ namespace SOLIDPrinciple.Repository
             {
                 return entities.Any(expression);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Helper.Text(ex.Message);
+                return false;
             }
         }
 
@@ -108,9 +116,10 @@ namespace SOLIDPrinciple.Repository
             {
                 return dbContext.Entry(entity).State = EntityState.Deleted;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Helper.Text(ex.Message);
+                return EntityState.Unchanged;
             }
         }
 
@@ -120,9 +129,10 @@ namespace SOLIDPrinciple.Repository
             {
                 return dbContext.SaveChanges();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                throw;
+                Helper.Text(ex.Message);
+                return 0;
             }
         }
     }
