@@ -165,6 +165,13 @@
     <Compile Include="Controllers\DIP\KeyMovementController.cs" />
     <Compile Include="Controllers\DIP\KeyReconcileController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ISP\LeaveOfAbsenceController.cs" />
+    <Compile Include="Controllers\ISP\PaymentController.cs" />
+    <Compile Include="Controllers\LSP\KeyExtensionController.cs" />
+    <Compile Include="Controllers\LSP\KeyRequestController.cs" />
+    <Compile Include="Controllers\OCP\CircleController.cs" />
+    <Compile Include="Controllers\OCP\RectangleController.cs" />
+    <Compile Include="Controllers\SRP\UserController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

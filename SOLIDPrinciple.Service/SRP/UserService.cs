@@ -11,7 +11,6 @@ namespace SOLIDPrinciple.Service.SRP
     public class UserService
     {
         private readonly SOLIDPrincipleDbContext dbContext;
-        private readonly TwilloService twilloService;
         public UserService()
         {
             dbContext = new SOLIDPrincipleDbContext();
@@ -19,7 +18,8 @@ namespace SOLIDPrinciple.Service.SRP
         public void AddUsers(Users users)
         {
             dbContext.Users.Add(users);
-            
+
+            TwilloService twilloService = new TwilloService();
             // THIS SRP ROLE APPLY
             twilloService.TwilioSay(users.Phone, "You are registered.");
         }
