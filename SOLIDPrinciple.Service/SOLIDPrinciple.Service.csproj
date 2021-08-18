@@ -69,6 +69,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="ISP\ICommon.cs" />
+    <Compile Include="ISP\ILeaveOfAbsence.cs" />
+    <Compile Include="ISP\IPayment.cs" />
+    <Compile Include="ISP\LeaveOfAbsence.cs" />
+    <Compile Include="ISP\Payment.cs" />
     <Compile Include="SRP\TwilloService.cs" />
     <Compile Include="SRP\UserService.cs" />
     <Compile Include="OCP\CircleService.cs" />
@@ -79,7 +84,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interface\" />
-    <Folder Include="ISP\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -89,6 +93,10 @@
     <ProjectReference Include="..\SOLIDPrinciple.Models\SOLIDPrinciple.Models.csproj">
       <Project>{0CE9D92B-68A0-4607-A03A-E4A9BDF31432}</Project>
       <Name>SOLIDPrinciple.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SOLIDPrinciple.Repository\SOLIDPrinciple.Repository.csproj">
+      <Project>{2070C41B-B1A5-490F-B90F-C79338324272}</Project>
+      <Name>SOLIDPrinciple.Repository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
