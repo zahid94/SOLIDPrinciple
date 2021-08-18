@@ -1,4 +1,5 @@
-﻿using SOLIDPrinciple.Repository;
+﻿using SOLIDPrinciple.Models;
+using SOLIDPrinciple.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace SOLIDPrinciple.Service.ISP
 {
-    public class LeaveOfAbsence : ICommon<LeaveOfAbsence>, ILeaveOfAbsence<LeaveOfAbsence>
+    public class LeaveOfAbsenceService : ICommon<LeaveOfAbsence>, ILeaveOfAbsence<LeaveOfAbsence>
     {
         private readonly IGenericRepository<LeaveOfAbsence> repository;
-        public LeaveOfAbsence()
+        public LeaveOfAbsenceService()
         {
             repository = new GenericRepository<LeaveOfAbsence>();
         }

@@ -1,4 +1,5 @@
-﻿using SOLIDPrinciple.Repository;
+﻿using SOLIDPrinciple.Models;
+using SOLIDPrinciple.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace SOLIDPrinciple.Service.ISP
 {
-    public class Payment : ICommon<Payment>, IPayment<Payment>
+    public class PaymentService : ICommon<Payment>, IPayment<Payment>
     {
         private readonly IGenericRepository<Payment> repository;
-        public Payment()
+        public PaymentService()
         {
             repository = new GenericRepository<Payment>();
         }

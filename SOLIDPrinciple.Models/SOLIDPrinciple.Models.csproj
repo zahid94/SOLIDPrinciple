@@ -52,6 +52,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContextArea\SOLIDPrincipleDbContext.cs" />
+    <Compile Include="KeyExtension.cs" />
+    <Compile Include="KeyRequest.cs" />
     <Compile Include="LeaveOfAbsence.cs" />
     <Compile Include="Payment.cs" />
     <Compile Include="Users.cs" />

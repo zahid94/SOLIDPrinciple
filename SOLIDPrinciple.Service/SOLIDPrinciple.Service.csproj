@@ -69,11 +69,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Class1.cs" />
+    <Compile Include="LSP\IAction.cs" />
+    <Compile Include="LSP\IKeyExtension.cs" />
+    <Compile Include="LSP\IKeyRequest.cs" />
+    <Compile Include="LSP\KeyExtensionService.cs" />
     <Compile Include="ISP\ICommon.cs" />
     <Compile Include="ISP\ILeaveOfAbsence.cs" />
     <Compile Include="ISP\IPayment.cs" />
-    <Compile Include="ISP\LeaveOfAbsence.cs" />
-    <Compile Include="ISP\Payment.cs" />
+    <Compile Include="ISP\LeaveOfAbsenceService.cs" />
+    <Compile Include="ISP\PaymentService.cs" />
+    <Compile Include="LSP\KeyRequestService.cs" />
     <Compile Include="SRP\TwilloService.cs" />
     <Compile Include="SRP\UserService.cs" />
     <Compile Include="OCP\CircleService.cs" />
@@ -83,6 +88,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="DIP\" />
     <Folder Include="Interface\" />
   </ItemGroup>
   <ItemGroup>
